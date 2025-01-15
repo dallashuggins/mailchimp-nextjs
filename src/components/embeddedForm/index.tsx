@@ -14,7 +14,7 @@ export function EmbeddedForm() {
     const firstName = formData.get("firstName");
     const lastName = formData.get("lastName");
     const email = formData.get("email");
-    const response = await fetch("/api/ml/subscribeUser", {
+    const response = await fetch("/api/mc/subscribeUser", {
       body: JSON.stringify({
         email,
         firstName,
@@ -47,18 +47,18 @@ export function EmbeddedForm() {
 
   return (
     <form onSubmit={subscribeUser} className={css.form}>
-      <h2>Subscribe to our newsletter!</h2>
+      <h2 className={css.header}>Subscribe to our newsletter!</h2>
       <div className={css.inputWrapper}>
         <label className={css.inputAndLabel}>
-          <span>First name</span>
+          <span className={css.inputFieldLabel}>First name</span>
           <input name="firstName" className={css.inputField} />
         </label>
         <label className={css.inputAndLabel}>
-          <span>Last name</span>
+          <span className={css.inputFieldLabel}>Last name</span>
           <input name="lastName" className={css.inputField} />
         </label>
         <label className={css.inputAndLabel}>
-          <span>Email</span>
+          <span className={css.inputFieldLabel}>Email</span>
           <input name="email" type="email" className={css.inputField} />
         </label>
       </div>

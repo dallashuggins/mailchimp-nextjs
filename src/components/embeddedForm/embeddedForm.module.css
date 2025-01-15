@@ -1,13 +1,9 @@
 .form {
   @apply pl-5 text-center py-9;
-
-  h2 {
-    @apply mb-4 text-xl text-start;
-  }
 }
 
-.inputField {
-  @apply block text-black;
+.header {
+  @apply mb-4 text-xl text-start;
 }
 
 .inputWrapper {
@@ -15,19 +11,21 @@
 }
 
 .button {
-  @apply block px-3 py-2 mt-5 text-base font-medium text-white rounded-md bg-green;
-  text-shadow: 2px 2px black;
+  @apply block px-3 py-2 mt-5 text-base font-medium text-black rounded-md bg-white;
 }
 
 .inputAndLabel {
   @apply block rounded-md;
-  span {
-    @apply block my-2 font-semibold text-left;
-  }
-  input {
-    @apply block min-w-96 rounded-md py-1.5 pl-1 pr-3;
-    @apply focus:outline focus:outline-2 focus:outline-offset-1 focus:green;
-  }
+}
+
+.inputFieldLabel {
+  @apply block my-2 font-semibold text-left;
+}
+
+.inputField {
+  @apply block text-black;
+  @apply block min-w-96 rounded-md py-1.5 pl-1 pr-3;
+  @apply focus:outline focus:outline-2 focus:outline-offset-1;
 }
 
 .errorMessage {

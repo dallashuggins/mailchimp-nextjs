@@ -9,7 +9,7 @@ mailchimp.setConfig({
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const { email } = body;
+  const { firstName, lastName, email } = body;
   if (!email) {
     return NextResponse.json({ error: "Email is required." }, { status: 400 });
   }
@@ -37,6 +37,10 @@ export async function POST(request: NextRequest) {
     const data = await mailchimp.lists.addListMember(audienceId, {
       email_address: email,
       status: "subscribed",
+      merge_fields: {
+        FNAME: firstName ?? "",
+        LNAME: lastName ?? "",
+      },
     });
     return NextResponse.json({ data });
   } catch (error: unknown) {
