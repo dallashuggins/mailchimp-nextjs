@@ -31,6 +31,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Mailchimp Integration
 
+See the full tutorial [here](https://engineering.deptagency.com/how-to-integrate-mailchimp-with-next-js-and-typescript).
+
 The EmbeddedForm and CircularLoader components have been added to this application to consume the api/mc/subscribeUser endpoint. This endpoint creates a subscribed list member in Mailchimp.
 
 In order to try out the form, add environment variables for your account to a .env file. You can copy the .env-example file for the specific variable names, or see the descriptions below.
